@@ -1,26 +1,79 @@
 ---
 title: 晓知晚香不逊朝
-date: 2022-10-18 20:00:00
-update: 2025-01-14 20:00:00
+date: 2023-10-16 20:00:00
+update: 2025-06-28 20:00:00
 comments: true
 password: 202450148887
 theme: xray
-message: 这里，献给晚香。请输入你的发展团员编号（e.g.2025250440000）
-abstract: 一个简单而复杂的数字 #密码框提示信息
-wrong_pass_message: 拒绝访问，错误原因：权限不足 #密码错误提示信息
+message: 幽然里蓦然相逢，一笑定格古今同，可相拥。（口令：发展团员编号）
+abstract: 这里，献给晚香。请输入你的发展团员编号 #密码框提示信息
+wrong_pass_message: 拒绝访问，权限不足。————长夏碧浪拒绝您的访问，返回错误：ERR_PASSWORDS_0000x1 #密码错误提示信息
 ---
 
-<table><tr><td bgcolor=MistyRose>身份验证通过，权限接入</td></tr></table>Welcome!<br>欢迎访问小站这一块，这一只面向你的一块
+<table><tr><td bgcolor=MistyRose>身份验证通过，权限接入</td></tr></table>Welcome!<br>欢迎访问小站封存的仓库。
 
 > 夜来暗香恰婷婷，晓知晚香不逊朝。落花飘零随流水，涤洗笑容更娇明。
+*——改编自浍朝*
 
-# 0. 日志(2025)<h1>
+`（单击播放本页面BackgroundMusic）`
 
-+ 2025年1月初旬 16:40前后15分
+<div class="about_page">
+  <div align=center class="aspect-ratio">
+	<iframe src="//player.bilibili.com/player.html?bvid=BV1u8411Z7eK" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" autoplay="1"></iframe></div>
+<br>
 
-  <table><tr><td bgcolor=White>16:40许 数学竞赛（新纪元复旦数学创新班期末），到考场时以为随便坐位置，合道选择了一排空位，二哥来坐另一边位置，合道见状起身准备离开，晚香夺过二哥的考试用品把自己的放在合道旁边的桌子上，说那个位置是他的（原话：”你干什么，这个位置是我的“）二哥离开，晚香犹豫再三，这时监考员按名单分配位置。<br>考完提前交卷合道没交，晚香和Farmer陪到18点然后下去复习小四门。</td></tr></table>
 
-+ 2025.01.14 16;30前后30分
+[![gdq9N.jpeg](https://i.imgs.ovh/2025/06/29/gdq9N.jpeg)](https://imgloc.com/image/gdq9N)
 
-  <table><tr><td bgcolor=White>16:20许 留下打扫八年级上册的最后一次教室卫生，中途晚香请合道讲物理测试题，在教室小屋里看到晚香在换垃圾袋，说了句话，晚香没听清说的是什么，合道拿着抹布去打湿水，晚香追着跟到水龙头处<br>16:40许，收拾书包离开，浍朝和Windy借口上厕所实际上是想吃瓜故意走开，合道与晚香上楼，合道让晚香在楼梯栏杆处看，结果看见浍朝和windy跑上楼，和合道、浍朝对视。出校门过程中晚香似懂非懂。</td></tr></table>
 
+
+
+
+[![R3DkC.jpeg](https://i.imgs.ovh/2025/06/26/R3DkC.jpeg)](https://imgloc.com/image/R3DkC)
+
+[![R39Oq.jpeg](https://i.imgs.ovh/2025/06/26/R39Oq.jpeg)](https://imgloc.com/image/R39Oq)
+
+[![R3Mo4.jpeg](https://i.imgs.ovh/2025/06/26/R3Mo4.jpeg)](https://imgloc.com/image/R3Mo4)
+
+[![R3PNA.jpeg](https://i.imgs.ovh/2025/06/26/R3PNA.jpeg)](https://imgloc.com/image/R3PNA)
+
+[![R32xU.jpeg](https://i.imgs.ovh/2025/06/26/R32xU.jpeg)](https://imgloc.com/image/R32xU)
+
+[![R3WUN.jpeg](https://i.imgs.ovh/2025/06/26/R3WUN.jpeg)](https://imgloc.com/image/R3WUN)
+
+
+
+[![R3nWH.jpeg](https://i.imgs.ovh/2025/06/26/R3nWH.jpeg)](https://imgloc.com/image/R3nWH)
+
+[![R3JrX.jpeg](https://i.imgs.ovh/2025/06/26/R3JrX.jpeg)](https://imgloc.com/image/R3JrX)
+
+[![R3YsQ.jpeg](https://i.imgs.ovh/2025/06/26/R3YsQ.jpeg)](https://imgloc.com/image/R3YsQ)
+
+
+[![R3EOm.jpeg](https://i.imgs.ovh/2025/06/26/R3EOm.jpeg)](https://imgloc.com/image/R3EOm)
+
+[![R3opF.jpeg](https://i.imgs.ovh/2025/06/26/R3opF.jpeg)](https://imgloc.com/image/R3opF)
+
+
+[![gdUEa.jpeg](https://i.imgs.ovh/2025/06/29/gdUEa.jpeg)](https://imgloc.com/image/gdUEa)
+
+[![gdVit.jpeg](https://i.imgs.ovh/2025/06/29/gdVit.jpeg)](https://imgloc.com/image/gdVit)
+
+[![gdzbq.jpeg](https://i.imgs.ovh/2025/06/29/gdzbq.jpeg)](https://imgloc.com/image/gdzbq)
+
+[![gdA2C.jpeg](https://i.imgs.ovh/2025/06/29/gdA2C.jpeg)](https://imgloc.com/image/gdA2C)
+
+[![7qkJ1p.jpeg](https://i.imgs.ovh/2025/09/26/7qkJ1p.jpeg)](https://imgloc.com/image/7qkJ1p)
+
+[![7qkHYc.jpeg](https://i.imgs.ovh/2025/09/26/7qkHYc.jpeg)](https://imgloc.com/image/7qkHYc)
+
+[![7qkoT6.jpeg](https://i.imgs.ovh/2025/09/26/7qkoT6.jpeg)](https://imgloc.com/image/7qkoT6)
+
+[![7qk4QO.jpeg](https://i.imgs.ovh/2025/09/26/7qk4QO.jpeg)](https://imgloc.com/image/7qk4QO)
+
+
+<h1> 曲终，愿我们在塔中重逢......</h1>
+
+```markdown
+<div id="aplayer-oSEOhviA" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="4895239160" data-server="netease" data-type="playlist" data-mode="random" data-autoplay="false" data-listmaxheight="340px" data-preload="auto" data-theme="#e3f2f5" data-volume="0.4" mutex="true"></div>
+```

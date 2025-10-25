@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HeDaoZhiWan
-subtitle: 合道知晚同志的小站
+title: LyricOde
+subtitle: 欢迎来访
 description: '休笑我命朝暮间，也敢只手补天裂'
-keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,HeDaoZhiWan,CHENLinyun'
-author: HeDaoZhiWan
+keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,HeDaoZhiWan,CHENLinyun,IotaCarinae,LyricOde'
+author: LyricOde
 language: zh-CN
 timezone: ''
 
@@ -18,7 +18,9 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.hedaozhiwan.top/
+url: https://www.hedaozhiwan.top/blog/
+# ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
+root: /blog/  # 关键：必须以斜杠开头和结尾
 permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
@@ -35,6 +37,12 @@ code_dir: downloads/code
 i18n_dir: :lang
 # 指定不渲染某些页面
 skip_render: 
+
+# 确保所有静态资源使用相对路径
+assets:
+  css: css/
+  js: js/
+  images: images/
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
@@ -81,6 +89,8 @@ aplayer:
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
+
+
 index_generator:
   path: ''
   per_page: 12
@@ -134,9 +144,13 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: git
-    repository: git@github.com:HeDaoComrade/HeDaoComrade.github.io.git # 这里写上你的Github地址
-    branch: main
+  type: git
+  repo: https://github.com/HeDaoComrade/blog.git
+  branch: master
+# deploy:
+#   type: git
+#   repo: https://github.com/HeDaoComrade/blog.git
+#   branch: master
   # - type: baidu_url_submitter
   # - type: git
   #   #repo改为repo: git@域名:/var/repo/hexo.git

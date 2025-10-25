@@ -4,14 +4,10 @@
 
 menu:
   首页: / || icon-home || faa-tada
-  文章 || icon--article || faa-tada || hide:
+  博客 || icon--article || faa-tada || hide:
     归档: /archives/ || icon-guidang1 || faa-tada
     标签: /tags/ || icon-sekuaibiaoqian || faa-tada
     分类: /categories/ || icon-fenlei || faa-tada
-  休闲 || icon-pinweishenghuo || faa-tada || hide:
-    八音盒: /life/music/ ||icon-yinle || faa-tada
-    影院: /life/movies/ ||icon-dianying1 || faa-tada
-    游戏: /life/games/ || icon-youxishoubing || faa-tada
   八宝箱 || icon-xiangzi || faa-tada || hide:
     画廊: /box/gallery/ ||icon-tubiaozhizuomoban || faa-tada
     动画: /box/animation/ || icon-nvwumao || faa-tada
@@ -26,8 +22,9 @@ menu:
     旧时光: /site/time/ || icon-xianxingshalou || faa-tada
   个人 || icon-maoliang || faa-tada || hide:
     唠叨: /personal/bb/ || icon-qunliaotian || faa-tada
-    晓知晚香不逊朝: /personal/zhiwan/ || icon-love-sign || faa-tada
+    故地重游: /personal/zhiwan/ || icon-love-sign || faa-tada
     关于: /personal/about/ || icon-paperplane || faa-tada
+    长夏碧浪: /personal/715/ || icon-love-sign || faa-tada
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -325,7 +322,6 @@ comments:
 # disqus
 # https://disqus.com/
 disqus:
-  # fomalhaut1998
   shortname:
   apikey: # For newest comments widget
 
@@ -401,10 +397,11 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: 
-  region:
+  enable: true
+  envId: cloud1-4gdspovdfed62665
+  region: ap-guangzhou
   visitor: false
-  option:
+  option: location.pathname
 
 # Giscus
 # https://giscus.app/
@@ -563,15 +560,27 @@ tag_ui: # 留空或 index
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # "#e4f4f6" "#efefef"
+
 background:
   #【必选】默认背景 
-  default: var(--default-bg)
+  default: url(/blog/img/dark_mode.webp)
   #【可选】PC端夜间模式背景 
-  darkmode: var(--darkmode-bg)
+  darkmode: url(/blog/img/default_cover_87.webp)
   #【可选】移动端日间默认背景 
-  mobileday: var(--mobileday-bg)
+  mobileday: url(/blog/img/mb18.webp)
   #【可选】移动端夜间模式背景 
-  mobilenight: var(--mobilenight-bg)
+  mobilenight: url(/blog/img/mb8.webp)
+
+
+#background:
+#  #【必选】默认背景 
+#  default: var(--default-bg)
+#  #【可选】PC端夜间模式背景 
+#  darkmode: var(--darkmode-bg)
+#  #【可选】移动端日间默认背景 
+#  mobileday: var(--mobileday-bg)
+#  #【可选】移动端夜间模式背景 
+#  mobilenight: var(--mobilenight-bg)
 
 # Footer Background
 footer_bg: false
@@ -613,10 +622,10 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: false
+  enable: true
   colorful: true # open particle animation (冒光特效)
   shake: true #  open shake (抖動特效)
-  mobile: false
+  mobile: true
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
@@ -653,36 +662,18 @@ beautify:
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
-font:
-  global-font-size: 15.5px
-  code-font-size: 14.5px
-  # -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
-  # Wenkai, consolas, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  font-family: var(--global-font), -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  # consolas, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  # Consolas_1, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-
-# 新修改见下——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
-#font:
-#  global-font-size: '15px'
-#  code-font-size: '14px'
-  # -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
-  # Wenkai, consolas, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-#  font-family: var(--global-font), Consolas_1, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  # consolas, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  # Consolas_1, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-#  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
+font:
+  global-font-size: '15px'
+  code-font-size: '14px'
+  font-family: YSHST, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  code-font-family: Consolas, YSHST, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
 
-# Font settings for the site title and site subtitle
-# https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
-# Titillium Web, 'PingFang SC' , 'Hiragino Sans GB' , 'Microsoft JhengHei' , 'Microsoft YaHei' , sans-serif
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-  font_link:
-  font-family: var(--global-font)
+  font_link: 
+  font-family: YSHST, -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -706,12 +697,13 @@ subtitle:
   source: false
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
-    - "Hello!欢迎来到HeDaoZhiWan的小站"
-    - "休笑我命朝暮间，也敢只手补天裂。"
+    - "门虽有设，常关只迎缘客；园虽极小，若进却景亦佳."
+    - "在电幻的荒丘，寻真实的绿洲。就算渺小浮游，也仰望着宇宙。"
     - "假作真时真亦假，无为有处有还无。"
     - "身后有余忘缩手，眼前无路想回头。"
-    - "在电幻的荒丘，寻真实的绿洲。就算渺小浮游，也仰望着宇宙。"
-    - "CHENLinyun:Make your life brightly!"
+    - "朝闻道，夕死可以。"
+    - "休笑我命朝暮间，也敢只手补天裂。"
+
 
 # Loading Animation (加載動畫)
 # preloader: false
@@ -740,7 +732,7 @@ aside:
     button:
       enable: true
       icon: # fab fa-github
-      text: 前往源代码
+      text: 前往仓库
       link: https://github.com/HeDaoComrade
   card_announcement:
     enable: true
@@ -804,7 +796,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -889,7 +881,30 @@ pjax:
 # Inject the css and script (aplayer/meting)
 aplayerInject:
   enable: true
-  per_page: false
+  per_page: true
+
+##侧边栏歌单
+enable: true
+js:
+  - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js
+  - https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js
+css:
+  - https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css
+id: 13923193288
+server: netease
+type: playlist
+fixed: 'true'
+order: random
+preload: metadata
+listFolded: 'false'
+hideLrc: true
+lrctype: 3
+
+# Prism.js
+prismjs_js:
+prismjs_lineNumber_js:
+prismjs_autoloader:
+
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
@@ -954,22 +969,80 @@ inject:
     - <span id="fps"></span> # 帧率检测
     - <style id="defineBg"></style> # 自定义背景选项
     - <style id="menu_shadow"></style> # 菜单发光样式
-
+    - <link rel="stylesheet" href="/blog/css/custom.css">
+    - <link rel="stylesheet" href="/blog/css/cat.css">
+    - <link rel="stylesheet" href="/blog/css/universe.css">
+    - <span id="fps"></span> # 帧率检测
+    
   bottom:
-    - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> # jQuery
-    - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script> # VUE
-    - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script> # ElementUI
-    - <script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script> # 分享按钮依赖
-    - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
-    - <script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script> # 顶部进度条js
-    - <script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script> # winbox
-    - <script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script> # js图标引入1
-    - <script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script> # js图标引入2
-    - <script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script> # js图标引入3
-    - <script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script>  # 新年元宝
-    - <canvas id="universe"></canvas> # 星空画布
+    # jQuery（必须在 fomal.js 前加载）
+    - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
+    - <script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script>
+    # 挂绳小猫咪
+    - <script defer data-pjax src="/blog/js/cat.js"></script>
+
+    # 自定义脚本，依赖 jQuery
+    - <script src="/blog/js/fomal.js"></script>
+
+    # Vue、ElementUI、Clipboard 等依赖
+    - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script>
+    - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script>
+    - <script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+
+    # 打字效果依赖
+    - <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+    # 节日弹窗依赖
+    - <script defer src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
+
+    # 顶部加载条
+    - <script async src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script>
+
+    # winbox 弹窗组件
+    - <script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
+
+    # 阿里图标
+    - <script async src="https://at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script>
+    - <script async src="https://at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script>
+    - <script async src="https://at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script>
+
+    # 新年元宝动画
+    - <script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script>
+
+    # 星空画布
+    - <canvas id="universe"></canvas>
+
+    - <canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;pointer-events:none"></canvas>
     - <canvas id="snow"></canvas> # 雪花画布
-    - <script defer src="/js/fomal.js"></script> # 主模块js
+    - <script async src="/blog/js/snow.js"></script> # 雪花特效
+
+    # APlayer + Meting 音乐播放器（推荐国内 CDN）
+    - <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
+    - <script src="https://cdn.staticfile.org/meting/1.2.0/Meting.min.js"></script>
+
+    # 播放器挂载容器（可放到 HTML 中，但这里放也可以）
+    - <div class="aplayer no-destroy" data-id="13923270894" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false"></div>
+    - <script defer src="/blog/js/cursor.js"></script>
+
+    # 樱花特效
+    - <script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script>
+    - <canvas id="universe"></canvas>
+    - <script defer src="/blog/js/universe.js"></script>
+
+    - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
+    - <script defer src="/blog/js/lunar.js"></script> # 农历计算
+    - <script defer src="/blog/js/day.js"></script> # 节日弹窗
+
+    # 自定义右键菜单
+    - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
+    - <script type="text/javascript" src="/blog/js/rightmenu.js"></script>
+
+    # 自定义控制台输出信息
+    - <script async src="/blog/js/console.js"></script>
+
+    - <script async src="/blog/js/fps.js"></script> # 帧率检测
+
+    - <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -1020,9 +1093,9 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    lazyload: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js
-    instantpage: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
-    typed: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js
+    lazyload: https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.min.js
+    instantpage: https://cdn.bootcdn.net/ajax/libs/instant.page/5.2.0/instantpage.min.js
+    typed: https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js
     # pangu:
     fancybox_css_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css
     fancybox_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js
@@ -1066,12 +1139,12 @@ wowjs:
     #   offset: 30
     #   iteration: 1
     # 分类磁贴
-    # - class: catalog_magnet
-    #   style: animate__zoomIn
-    #   duration: 1.5s·
-    #   delay: 200ms
-    #   offset: 30
-    #   iteration: 1
+    - class: catalog_magnet
+      style: animate__zoomIn
+      duration: 1.5s·
+      delay: 200ms
+      offset: 30
+      iteration: 1
     # 侧边卡片栏
     - class: card-widget
       style: animate__zoomIn
@@ -1160,4 +1233,4 @@ index_card_style: multicard # slidecard | multicard
 
 # 灯笼开关 建议只在过年期间开启
 lantern:
-  enable: true
+  enable: false
