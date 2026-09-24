@@ -9,9 +9,7 @@ jobs:
   sync-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # 允许推送代码到仓库（gh-pages分支）
-      pages: write      # 允许部署到GitHub Pages
-      id-token: write   # 允许获取OIDC令牌（部分部署方式需要）
+      contents: write
     timeout-minutes: 20
 
     steps:
@@ -38,9 +36,12 @@ jobs:
       - name: Build Hexo
         run: hexo clean && hexo generate
 
-      - name: Deploy
+      - name: Deploy to blog repo
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.BLOG_DEPLOY_KEY }}
+          external_repository: HeDaoComrade/blog
+          publish_branch: master
           publish_dir: ./public
-          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
