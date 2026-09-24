@@ -1,0 +1,42 @@
+name: Qzone Sync & Deploy
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # 每天 UTC 02:00（北京时间 10:00）
+  workflow_dispatch:       # 支持手动触发
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Hexo
+        run: |
+          npm install
+          npm install -g hexo-cli
+
+      - name: Fetch Qzone data
+        env:
+          QZONE_CREDENTIALS_B64: ${{ secrets.QZONE_CREDENTIALS }}
+        run: python tools/fetch-qzone.py
+
+      - name: Build Hexo
+        run: hexo clean && hexo generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages

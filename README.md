@@ -1,13 +1,13 @@
-### 🥝的网站目前已经开源啦！！！暂定名为**hexo-theme-Fomalhaut**，原作者网站：[www.fomal.cc](https://www.fomal.cc)，如果你喜欢的话可以帮我点一个免费的Star🌟🌟🌟哦！
+### LyricOde的网站目前已经开源啦！！！暂定名为**hexo-theme-Fomalhaut**，原作者网站：[lyricode.top的博客页](https://lyricode.top/blog/)，如果你喜欢的话可以帮我点一个免费的Star🌟🌟🌟哦！
 
 ### 🚧🚧🚧本开源项目并不适合纯小白，需要一定的魔改经验，因此安装之前务必对Hexo框架命令和Butterfly主题比较熟悉，不熟悉的朋友建议提前熟悉[Hexo中文文档](https://hexo.bootcss.com/docs/configuration.html)和[Butterfly主题文档](https://butterfly.js.org/)，以及熟悉本站魔改教程，别上来就问文章怎么写！！！避免各种不必要的麻烦！！！望周知！！！！！！！！！！
 
 
-![](/repoPic/cover.jpg)
+![](/repoPic/cover.png)
 
 本源码是基于`Butterfly 4.3.1`的二次开发，暂时没做完全的主题分离，因此安装方法是整个博客的替换，建议另起一个文件夹进行安装，或备份好原来的资料再搬过来。当然你也可以不直接搬走，而是借鉴里面的部分代码写法。
 
-### 📅📅📅3.5更新：微调部分样式，修复部分人反映手机端无法加载css样式的问题，问题在`fomal.js`的1340行附近，切换至手机端时候导致空指针异常，这部分代码注释掉即可！
+### 📅📅📅10.24更新：微调部分样式，修复部分同学反映手机端无法加载css样式的问题，问题在`fomal.js`的1340行附近，切换至手机端时候导致空指针异常，这部分代码注释掉即可！
 
 ```js
 /* 搜索框修复 start */
@@ -28,10 +28,10 @@
 
 大家如果还遇到什么问题欢迎给作者留言，作者看到会第一时间修复哦，感谢您的支持！
 
-### 🍡🍡🍡安装教程（演示NodeJS v16.14.0 + Hexo 6.3.0）：
+### 🍡🍡🍡安装教程（演示NodeJS v22.21.0 + Hexo 6.9.0）：
 
 1. 安装 NodeJs、Hexo、Git、注册并连接Github，此部分可参考[Hexo博客搭建基础教程(一)](https://www.fomal.cc/posts/e593433d.html)。
-  PS：相当于链接教程的第1-7步，第8步就不要做了，不然会清空源码的！！！（不是新手请跳过这条）
+    PS：相当于链接教程的第1-7步，第8步就不要做了，不然会清空源码的！！！（不是新手请跳过这条）
 
 2. 把源码打包下载到自己的电脑，然后解压缩到一个你喜欢的文件夹中
 
@@ -173,7 +173,7 @@
     var dnum = Math.floor(days);
   
     var ascll = [
-      `欢迎来到Fomalhaut🥝の小家!`,
+      `欢迎来到LyricOde🥝の小家!`,
       `Future is now 🍭🍭🍭`,
       `
           
@@ -187,7 +187,7 @@
       "小站已经苟活",
       dnum,
       "天啦!",
-      "©2022 By Fomalhaut",
+      "©2022 By LyricOde",
     ];
   
     setTimeout(
@@ -226,7 +226,7 @@
     setTimeout(
       console.warn.bind(
         console,
-        "%c ⚡ Powered by Fomalhaut🥝 %c 你正在访问Fomalhaut🥝の小家",
+        "%c ⚡ Powered by LyricOde🥝 %c 你正在访问LyricOde🥝の小家",
         "color:white; background-color:#f0ad4e",
         ""
       )
@@ -400,13 +400,13 @@
 - 网站图标为根目录的`favicon.ico`，替换为你自己的图标即可
 - 个人信息卡片的图标和菜单栏等图标，参考[博客魔改教程总结(二)](https://www.fomal.cc/posts/5389e93f.html)中的第4-7项
 - 其余配置项基本与Butterfly兼容，参考[Butterfly官方文档](https://butterfly.js.org/)即可
-- 遇到问题请多看相关文档(Hexo主题文档、Butterfly主题文档、店长的教程)和本站教程，若有其他疑问请加Q群：`691942826` 验证回答：`🥝开源项目`
+- 遇到问题请多看相关文档(Hexo主题文档、Butterfly主题文档、店长的教程)和本站教程
 
 
 
 ### 项目星标概况
 
-[![Star History Chart](https://api.star-history.com/svg?repos=fomalhaut1998/hexo-theme-Fomalhaut&type=Timeline)](https://star-history.com/#fomalhaut1998/hexo-theme-Fomalhaut&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=hedaocomrade/hexo-theme-hedaocomrade&type=Timeline)](https://star-history.com/#hedaocomrade/hexo-theme-hedaocomrade&Timeline)
 
 
 

@@ -958,91 +958,98 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"> # 常规css
-    - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"> # 引入组件库(f12)
-    # 综合美化模块样式引入
+    # 引入 ElementUI 样式（F12 相关）
+    - <link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css">
+    
+    # 综合美化模块样式引入（ID 样式）
     - <style id="themeColor"></style> # 主题色
     - <style id="rightSide"></style> # 侧边栏
     - <style id="transPercent"></style> # 透明度调节
     - <style id="blurNum"></style> # 模糊半径调节
     - <style id="settingStyle"></style> # 模糊效果开关
-    - <span id="fps"></span> # 帧率检测
     - <style id="defineBg"></style> # 自定义背景选项
     - <style id="menu_shadow"></style> # 菜单发光样式
+    
+    # 自定义样式（注意路径）
     - <link rel="stylesheet" href="/blog/css/custom.css">
     - <link rel="stylesheet" href="/blog/css/cat.css">
     - <link rel="stylesheet" href="/blog/css/universe.css">
-    - <span id="fps"></span> # 帧率检测
     
+    # 帧率检测显示位置（span 元素）
+    - <span id="fps"></span> # 帧率检测显示元素（此 span 被 fomal.js 使用）
+
   bottom:
-    # jQuery（必须在 fomal.js 前加载）
+    # ========== 基础库（保证顺序） ==========
+    # jQuery（必须第一个加载，其他依赖 jQuery 的脚本需要在其后）
     - <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script>
-    - <script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script>
-    # 挂绳小猫咪
+    
+    # ========== 核心脚本（依赖 jQuery） ==========
+    # 挂绳小猫咪（依赖 jQuery）
     - <script defer data-pjax src="/blog/js/cat.js"></script>
-
-    # 自定义脚本，依赖 jQuery
-    - <script src="/blog/js/fomal.js"></script>
-
-    # Vue、ElementUI、Clipboard 等依赖
-    - <script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script>
-    - <script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script>
-    - <script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
-
-    # 打字效果依赖
-    - <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-
-    # 节日弹窗依赖
+    
+    # 自定义主脚本 fomal.js（依赖 jQuery、Vue、ElementUI 等，但通过 defer 保证顺序）
+    - <script defer src="/blog/js/fomal.js"></script>
+    
+    # ========== 第三方库（按需加载） ==========
+    # Vue、ElementUI、Clipboard（fomal.js 可能会用到）
+    - <script defer src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script>
+    - <script defer src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script>
+    - <script defer src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    
+    # 打字效果（fomal.js 可能用到）
+    - <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    
+    # 节日弹窗（sweetalert2 和 lunar、day 等）
     - <script defer src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script>
-
-    # 顶部加载条
+    - <script defer src="/blog/js/lunar.js"></script>
+    - <script defer src="/blog/js/day.js"></script>
+    
+    # 顶部加载条（独立）
     - <script async src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script>
-
-    # winbox 弹窗组件
+    
+    # WinBox 弹窗组件（fomal.js 的 toggleWinbox 使用）
     - <script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
-
-    # 阿里图标
+    
+    # 阿里图标（独立）
     - <script async src="https://at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script>
     - <script async src="https://at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script>
     - <script async src="https://at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script>
-
-    # 新年元宝动画
+    
+    # 新年元宝动画（独立）
     - <script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script>
-
-    # 星空画布
-    - <canvas id="universe"></canvas>
-
-    - <canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;pointer-events:none"></canvas>
-    - <canvas id="snow"></canvas> # 雪花画布
-    - <script async src="/blog/js/snow.js"></script> # 雪花特效
-
-    # APlayer + Meting 音乐播放器（推荐国内 CDN）
+    
+    # ========== 特效画布和脚本 ==========
+    # 星空画布（universe）
+    - <canvas id="universe" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;"></canvas>
+    - <script defer src="/blog/js/universe.js"></script>
+    
+    # 雪花画布（snow）
+    - <canvas id="snow" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;pointer-events:none;"></canvas>
+    - <script defer src="/blog/js/snow.js"></script>
+    
+    # 樱花特效（独立）
+    - <script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script>
+    
+    # ========== APlayer + Meting 音乐播放器 ==========
     - <script src="https://cdn.staticfile.org/aplayer/1.10.1/APlayer.min.js"></script>
     - <script src="https://cdn.staticfile.org/meting/1.2.0/Meting.min.js"></script>
-
-    # 播放器挂载容器（可放到 HTML 中，但这里放也可以）
+    # 播放器挂载容器
     - <div class="aplayer no-destroy" data-id="13923270894" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false"></div>
-    - <script defer src="/blog/js/cursor.js"></script>
-
-    # 樱花特效
-    - <script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script>
-    - <canvas id="universe"></canvas>
-    - <script defer src="/blog/js/universe.js"></script>
-
-    - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
-    - <script defer src="/blog/js/lunar.js"></script> # 农历计算
-    - <script defer src="/blog/js/day.js"></script> # 节日弹窗
-
-    # 自定义右键菜单
-    - <script type="text/javascript" src="https://cdn1.tianli0.top/npm/jquery@latest/dist/jquery.min.js"></script>
-    - <script type="text/javascript" src="/blog/js/rightmenu.js"></script>
-
-    # 自定义控制台输出信息
-    - <script async src="/blog/js/console.js"></script>
-
-    - <script async src="/blog/js/fps.js"></script> # 帧率检测
-
+    
+    # ========== 自定义右键菜单（依赖 jQuery） ==========
+    - <script defer src="/blog/js/rightmenu.js"></script>
+    
+    # ========== 自定义控制台输出 ==========
+    - <script defer src="/blog/js/console.js"></script>
+    
+    # ========== 帧率检测（fps） ==========
+    - <script defer src="/blog/js/fps.js"></script>
+    
+    # ========== 图片懒加载（独立） ==========
     - <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+    
+    # ========== 自定义鼠标光标（依赖 fomal.js 中的 CURSOR） ==========
+    - <script defer src="/blog/js/cursor.js"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

@@ -18,7 +18,7 @@ abbrlink:
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://www.hedaozhiwan.top/blog/
+url: https://www.lyricode.top/blog/
 # ——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————
 root: /blog/  # 关键：必须以斜杠开头和结尾
 permalink: posts/:abbrlink.html
@@ -84,6 +84,13 @@ aplayer:
   asset_inject: false
                
                     
+# QQ空间抓取
+qzone_sync:
+  enabled: true
+  json_path: qzone_shuoshuo_backup.json   # 相对于博客根目录
+  path: qzone/                           # 生成 /qzone/
+  title: 更新说说
+
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
